@@ -2,16 +2,16 @@
 
 	Um software que gerência tudo que você empresta para outras pessoas. O software registra a data de empréstimo, para quem foi o empréstimo e o que foi emprestado.
 
-# Requisitos Funcionais:
+# Funcionalidade:
 
 	1- O software deve ter menus para cada uma das funções, sub menus podem também se utilizados.
 
 	2- O software deve ser capaz de armazenar as seguintes informações :
-	 - Nome do contato( para quem se emprestou algo);
-	 - Telefone do contato (Fixo);
-	 - Celular do contato;
-	 - E-mail do contato;
-	 - Lugar de onde conhece ( Faculdade, academia, trabalho , etc.);
+	 - Nome do comodato (quem recebeu o emprestimo);
+	 - Telefone do comodato (Fixo);
+	 - Celular do comodato;
+	 - E-mail do comodato;
+	 - Lugar de onde conheceu (Faculdade, academia, trabalho , etc.);
 	 - O item que foi emprestado.
 
 	3- O software deve ter rotinas de busca :
