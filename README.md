@@ -1,4 +1,7 @@
-# Loans-management
+![logoloans](https://user-images.githubusercontent.com/43214946/51069386-f5287a00-160c-11e9-9d3a-3a49dd081ced.png)
+
+
+# Loans Management
 
    Um software que gerência tudo que você empresta para outras pessoas. O
 software registra a data de empréstimo, para quem foi o empréstimo e o que
