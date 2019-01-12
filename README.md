@@ -14,7 +14,7 @@ também se utilizados.
  - Telefone do comodato (Fixo);
  - Celular do comodato;
  - E-mail do comodato;
- - Lugar de onde conheceu (Faculdade, academia, trabalho , etc.);
+ - Lugar de onde o conheceu (Faculdade, academia, trabalho , etc.);
  - O item que foi emprestado.
 
 3- O software deve ter rotinas de busca :
