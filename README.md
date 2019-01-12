@@ -1,3 +1,4 @@
+/home/rodrigo/Documentos/Github-gdgato/Projects/Loans-management/logo/logoLoans.png
 # Loans-management
 
    Um software que gerência tudo que você empresta para outras pessoas. O
