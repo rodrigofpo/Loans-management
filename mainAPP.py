@@ -21,3 +21,7 @@ os dados da aplicação em arquivo usando a biblioteca picles
 
 
 #aqui começa o software ...
+
+import PySimpleGUI as sg
+
+sg.Popup('Welcome to the beginning of Loans Management!\nThank you.')
