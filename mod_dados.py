@@ -8,16 +8,15 @@ except Exception:
     emprestimos = []
 
 
-def cadastrar():
+def cadastrar(informacoes):
 
-    print("Insira as informações da pessoa, para quem foi feito o emprestimo.")
-    nome = input("Nome completo: ")
-    telefone = input("Telefone fixo: ")
-    celular = input("Telefone celular: ")
-    email = input("E-mail: ")
-    vivencia = input("De onde conhece o emprestador: ")
-    item = input("Item emprestado: ")
-    data = input("Data do emprestimo. \nex: dia/mês/ano\n>")
+    nome = informacoes[0]
+    telefone = informacoes[1]
+    celular = informacoes[2]
+    email = informacoes[3]
+    vivencia = informacoes[4]
+    data = informacoes[5]
+    item = informacoes[6]
     data = datetime.strptime(data, '%d/%m/%Y')
 
     emprestimo = {'nome': nome, 'telefone': telefone, 'celular': celular, 'email': email, 'vivencia': vivencia,
@@ -25,7 +24,7 @@ def cadastrar():
 
     emprestimos.append(emprestimo)
     gravar_dados()
-
+    print("Cadastro Salvo!")
 
 def gravar_dados():
     with open('dadosEmprestimos.bin', 'wb') as fgravar:
