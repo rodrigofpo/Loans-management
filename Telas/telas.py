@@ -3,7 +3,7 @@ import PySimpleGUI as sg
 
 
 def tela_cadastro():
-    layout = [
+    return [
                 [sg.Text("Cadastrar emprestimo")],
                 [sg.Text("Nome", size=(15, 1)), sg.InputText()],
                 [sg.Text("Telefone Fixo", size=(15, 1)), sg.InputText()],
@@ -16,8 +16,4 @@ def tela_cadastro():
                  sg.Cancel(button_text="Cancelar",button_color=('white', 'firebrick3'))]
                 ]
 
-    janela = sg.Window("Teste").Layout(layout)
-    botao, valores = janela.Read()
 
-    if botao == 'Cadastrar':
-        mod.cadastrar(valores)
