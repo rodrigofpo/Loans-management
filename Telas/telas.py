@@ -1,4 +1,4 @@
-from mod_dados import *
+import Modules as mod
 import PySimpleGUI as sg
 
 
@@ -20,4 +20,4 @@ def tela_cadastro():
     botao, valores = janela.Read()
 
     if botao == 'Cadastrar':
-        cadastrar(valores)
+        mod.cadastrar(valores)

@@ -10,7 +10,7 @@ foi emprestado.
 # Funcionalidade:
 
 1- O software deve ter menus para cada uma das funções, sub menus podem
-também se utilizados.
+também ser utilizados.
 
 2- O software deve ser capaz de armazenar as seguintes informações :
  - Nome do comodato (quem recebeu o emprestimo);

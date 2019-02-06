@@ -1,28 +1,31 @@
 '''
 Projeto de software - Tecnicas de programacao II
 
-1- Descriçao do projeto : descrever o que o seu projeto faz
-
+1- Descriçao do projeto :
+    - Cria e armazena cadastros de comodatos para um usuario a fim.
 
 2- Data: data em que o projeto foi feito
 
+3- Equipe:
+    - Diego Caiena - dio141@outlook.com - 2018001914
+    - Fabricio Cordeiro - fabriciojose3263@outlook.com - 2018004578
+    - Rodrigo Oliveira - rodrigopantoja17@yahoo.com - 2018004710
+    - Rômulo Sá - romulo.sa153@live.com - 2018001674
+    - Victor Manuel - victor.vsantos08@gmail.com -2018005118
+    - Willian Lucas - willamlucas@gmail.com -2018001709
 
-3- Equipe: listar o nome - email - matricula dos alunos
-- Fulano de tal  - Fulano@gmail.com - 201800123
 
+4 -Modulos que compoe o software: descrever a funçao de cada arquivo adicional que compoe o software
+    - Modules.py: Esse modulo fornece todas funções para salvar e ler (os dados da aplicação em arquivo,
+     usando a biblioteca Pickle), cadastrar, listar cadastros, buscar por nome, ano e mes + ano(usando dicionario e modulo datetime ),
 
-4 -Modulos que compoe o software: descrever a funçao de cada arquivo
-adicional que compoe o software
-
-- arquivos.py : Esse modulo fornece as funções para salvar e ler
-os dados da aplicação em arquivo usando a biblioteca picles
-
+    - Cadastrar
 '''
 
 
+
 #aqui começa o software ...
-import pickle
-from mod_dados import *
+import Modules as mod
 import PySimpleGUI as sg
 
 tab1_layout =  [[sg.Text("Cadastrar emprestimo")],
@@ -37,20 +40,18 @@ tab1_layout =  [[sg.Text("Cadastrar emprestimo")],
                  sg.Cancel(button_text="Cancelar",button_color=('white', 'firebrick3'))]
                 ]
 
-tab2_layout = [[sg.T('Empréstimos')],
-               [sg.In(key='in')]]
+tab2_layout = []
 
 layout = [[sg.TabGroup([[sg.Tab('Cadastrar', tab1_layout, ),
                          sg.Tab('Cadastros', tab2_layout)]], )]]
 
-window = sg.Window('Loans Manangement', default_element_size=(12,1)).Layout(layout)    
+window = sg.Window('Loans Manangement', default_element_size=(32,1)).Layout(layout)
 
 while True:
-    event, values = window.Read()
-    print(event,values)
-    if event is None:           # always,  always give a way out!
-        break
+    botao, valores = window.Read()
+    print(botao,valores)
     if botao == 'Cadastrar':
-        cadastrar(valores)
-
+        mod.cadastrar(valores)
+    elif botao is None:
+        break
 
