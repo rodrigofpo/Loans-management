@@ -21,7 +21,36 @@ os dados da aplicação em arquivo usando a biblioteca picles
 
 
 #aqui começa o software ...
-
+import pickle
+from mod_dados import *
 import PySimpleGUI as sg
 
-sg.Popup('Welcome to the beginning of Loans Management!\nThank you.')
+tab1_layout =  [[sg.Text("Cadastrar emprestimo")],
+                [sg.Text("Nome", size=(15, 1)), sg.InputText()],
+                [sg.Text("Telefone Fixo", size=(15, 1)), sg.InputText()],
+                [sg.Text("Celular", size=(15,1)), sg.InputText()],
+                [sg.Text("E-mail", size=(15,1)), sg.InputText()],
+                [sg.Text("De onde conhece", size=(15,1)), sg.InputText()],
+                [sg.Text("Data", size=(15,1)), sg.InputText("ex: dia/mês/ano", do_not_clear=False)],
+                [sg.Text("Item", size=(15,1)), sg.InputText()],
+                [sg.Button("Cadastrar",button_color=('white', 'springgreen4')),
+                 sg.Cancel(button_text="Cancelar",button_color=('white', 'firebrick3'))]
+                ]
+
+tab2_layout = [[sg.T('Empréstimos')],
+               [sg.In(key='in')]]
+
+layout = [[sg.TabGroup([[sg.Tab('Cadastrar', tab1_layout, ),
+                         sg.Tab('Cadastros', tab2_layout)]], )]]
+
+window = sg.Window('Loans Manangement', default_element_size=(12,1)).Layout(layout)    
+
+while True:
+    event, values = window.Read()
+    print(event,values)
+    if event is None:           # always,  always give a way out!
+        break
+    if botao == 'Cadastrar':
+        cadastrar(valores)
+
+
