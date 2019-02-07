@@ -2,6 +2,7 @@ import pickle
 import PySimpleGUI as sg
 from datetime import datetime
 from operator import itemgetter
+from Telas.telas import *
 
 try:
     with open('dadosEmprestimos.bin', 'rb') as ler:
@@ -31,6 +32,18 @@ def cadastrar(informacoes):
     except ValueError:
         sg.Popup("Erro no cadastro", button_color=('white', 'springgreen4'))
 
+
+def listar_emprestimos():
+    for emprestimo in emprestimos:
+        tela_informacoes(emprestimo)
+
+
+def buscar_nome(nome):
+    for emprestimo in emprestimos:
+        if nome.lower() in emprestimo['nome'].lower():
+            return emprestimo
+
+
 def gravar_dados():
     with open('dadosEmprestimos.bin', 'wb') as fgravar:
         pickle.dump(emprestimos, fgravar)
@@ -44,5 +57,16 @@ def ler_dados():
     except Exception:
         pass
 
-def key_func(data):
-    return emprestimos[0]['data']
+#auxiliares
+def printar_aux(emprestimo):
+    print("Nome:", emprestimo['nome'])
+    print("Telefone:", emprestimo['telefone'])
+    print("Celular:", emprestimo['celular'])
+    print("E-mail:", emprestimo['email'])
+    print("De onde conheço:", emprestimo['vivencia'])
+    print("Data:", emprestimo['data'].strftime("%d/%m/%Y"))
+    print("Item:", emprestimo['item'])
+
+
+def exlcuir_emprestimo(emprestimo):
+    emprestimos.remove(emprestimo)
