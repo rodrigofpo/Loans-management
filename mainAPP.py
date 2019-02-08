@@ -16,14 +16,12 @@ Projeto de software - Tecnicas de programacao II
 
 
 4 -Modulos que compoe o software: descrever a funçao de cada arquivo adicional que compoe o software
-    - Modules.py: Esse modulo fornece todas funções para salvar e ler (os dados da aplicação em arquivo,
+    - modules.py: Esse modulo fornece todas funções para salvar e ler (os dados da aplicação em arquivo,
      usando a biblioteca Pickle), cadastrar, listar cadastros, buscar por nome, ano e mes + ano(usando dicionario
      e modulo datetime ).
 '''
 
 #aqui começa o software ...
-import Modules as mod
-import PySimpleGUI as sg
 from Telas.telas import *
 
 cadastro = tela_cadastro()
@@ -35,6 +33,7 @@ layout = [[sg.TabGroup([[sg.Tab('Cadastrar', cadastro),
           ]
 
 window = sg.Window('Loans Manangement', default_element_size=(32,1)).Layout(layout)
+
 
 while True:
     botao, valores = window.Read()
@@ -48,7 +47,7 @@ while True:
         botao_busca,valores_busca = janela_resultado.Read()
         if botao_busca == 'Excluir':
             mod.exlcuir_emprestimo(resultado)
-            print(mod.emprestimos)
+            print(mod.EMPRESTIMOS)
 
     elif botao is None or botao == 'Cancelar':
         break

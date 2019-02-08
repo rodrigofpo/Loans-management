@@ -1,4 +1,4 @@
-import Modules as mod
+import modules as mod
 import PySimpleGUI as sg
 
 
@@ -26,7 +26,7 @@ def tela_informacoes(emprestimo):
                 [sg.Text(emprestimo['vivencia'], size=(20,1))],
                 [sg.Text(emprestimo['data'], size=(20,1))],
                 [sg.Text(emprestimo['item'], size=(20,1))],
-                [sg.Button("Excluir",button_color=('white', 'firebrick3'),pad=(60,0))]
+        [sg.Button("Excluir",button_color=('white', 'firebrick3'),pad=(60,0))]
             ]
 
 

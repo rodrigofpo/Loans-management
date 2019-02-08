@@ -1,17 +1,24 @@
+"""
+Módulo contendo toda lógica do sistema de emprestimos
+"""
 import pickle
-import PySimpleGUI as sg
 from datetime import datetime
 from operator import itemgetter
-from Telas.telas import *
+import PySimpleGUI as sg
 
 try:
     with open('dadosEmprestimos.bin', 'rb') as ler:
-        emprestimos = pickle.load(ler)
-except Exception:
-    emprestimos = []
+        EMPRESTIMOS = pickle.load(ler)
+except FileNotFoundError:
+    EMPRESTIMOS = []
 
 
 def cadastrar(informacoes):
+    """
+    Esta função irá passar os dados de uma lista para um dicionário,
+    e passará ele para a lista contendo todos emprestimos.
+    :param informacoes: a função receberá uma lista de strings
+    """
     try:
         nome = informacoes[0]
         telefone = informacoes[1]
@@ -21,44 +28,69 @@ def cadastrar(informacoes):
         data = informacoes[5]
         item = informacoes[6]
         data = datetime.strptime(data, '%d/%m/%Y').date()
+        emprestimo = {'nome': nome, 'telefone': telefone, 'celular': celular, 'email': email,
+                      'vivencia': vivencia, 'item': item, 'data': data}
 
-        emprestimo = {'nome': nome, 'telefone': telefone, 'celular': celular, 'email': email, 'vivencia': vivencia,
-                      'item': item, 'data': data}
-
-        emprestimos.append(emprestimo)
-        emprestimos.sort(key=itemgetter('data'))
+        EMPRESTIMOS.append(emprestimo)
+        EMPRESTIMOS.sort(key=itemgetter('data'))
         gravar_dados()
         sg.Popup("Cadastro realizado com sucesso", button_color=('white', 'springgreen4'))
+        return 0
     except ValueError:
         sg.Popup("Erro no cadastro", button_color=('white', 'springgreen4'))
+        return -1
 
 
 def listar_emprestimos():
-    for emprestimo in emprestimos:
-        tela_informacoes(emprestimo)
+    """
+    Esta é para quando se quiser listar todos os emprestimos, ainda, cadastrados no sistema
+    :return: a própria lista de emprestimos
+    """
+    return EMPRESTIMOS
 
 
 def buscar_nome(nome):
-    for emprestimo in emprestimos:
+    """
+    Função que irá atrás de um nome recebido, e verificará se está na lista de emprestimos
+    :param nome: recebe uma string, que será o nome para quem emprestou
+    :return: retornará o dicionário, contendo o nome pesquisado
+    """
+    for emprestimo in EMPRESTIMOS:
         if nome.lower() in emprestimo['nome'].lower():
             return emprestimo
 
 
 def gravar_dados():
-    with open('dadosEmprestimos.bin', 'wb') as fgravar:
-        pickle.dump(emprestimos, fgravar)
+    """
+    Função irar escrever os dados, em binário, no disco da máquina.
+    :return: retorna 0, para testes
+    """
+    with open('dadosEmprestimos.bin', 'wb') as arquivo:
+        pickle.dump(EMPRESTIMOS, arquivo)
+        return 0
 
 
 def ler_dados():
+    """
+    Função irar ler os dados, em binário, no disco da máquina.
+    :return: retorna 0, para testes
+    """
     try:
-        with open('dadosEmprestimos.bin', 'rb') as ler:
-            global emprestimos
-            emprestimos = pickle.load(ler)
-    except Exception:
-        pass
+        with open('dadosEmprestimos.bin', 'rb') as arquivo:
+            global EMPRESTIMOS
+            EMPRESTIMOS = pickle.load(arquivo)
+            return 0
+    except FileNotFoundError:
+        return -1
+
 
 #auxiliares
 def printar_aux(emprestimo):
+    """
+    Função para deburação do código
+    :param emprestimo: um dicionário, que estará na lista de emprestimos
+    :return: retorna 0, para testes
+    """
     print("Nome:", emprestimo['nome'])
     print("Telefone:", emprestimo['telefone'])
     print("Celular:", emprestimo['celular'])
@@ -69,4 +101,10 @@ def printar_aux(emprestimo):
 
 
 def exlcuir_emprestimo(emprestimo):
-    emprestimos.remove(emprestimo)
+    """
+    Funcionará em auxílio com o função busca, caso a pessoa deseje excluir o empréstimo que buscou.
+    :param emprestimo: receberá um dicionário, contento o emprestimo que deseja excluir
+    :return: retorna 0, para testes
+    """
+    EMPRESTIMOS.remove(emprestimo)
+    return 0
