@@ -22,26 +22,30 @@ Projeto de software - Tecnicas de programacao II
 '''
 
 #aqui começa o software ...
-from Telas.telas import *
+import Telas.telas as tela
+import modules as mod
+import PySimpleGUI as sg
+cadastro = tela.tela_cadastro()
 
-cadastro = tela_cadastro()
-
-busca = tela_busca()
+busca = tela.tela_busca()
 
 layout = [[sg.TabGroup([[sg.Tab('Cadastrar', cadastro),
                          sg.Tab('Buscar', busca)]])]]
 window = sg.Window('Loans Manangement', default_element_size=(32,1)).Layout(layout)
 
-
+print(mod.EMPRESTIMOS)
 while True:
     botao, valores = window.Read()
     print(botao,valores)
     if botao == 'Cadastrar':
         mod.cadastrar(valores)
+
     elif botao == 'Buscar':
         resultado = mod.buscar_nome(valores[0])
-        janela_resultado = sg.Window("Loans Manangement").Layout(tela_informacoes(resultado))
+        janela_resultado = sg.Window("Loans Manangement").Layout(tela.tela_informacoes(resultado))
         botao_busca,valores_busca = janela_resultado.Read()
         if botao_busca == 'Excluir':
             mod.exlcuir_emprestimo(resultado)
             print(mod.EMPRESTIMOS)
+    elif botao is None or botao == 'Cancelar':
+        break
