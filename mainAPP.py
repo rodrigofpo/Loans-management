@@ -29,9 +29,7 @@ cadastro = tela_cadastro()
 busca = tela_busca()
 
 layout = [[sg.TabGroup([[sg.Tab('Cadastrar', cadastro),
-                         sg.Tab('Buscar', busca)]])]
-          ]
-
+                         sg.Tab('Buscar', busca)]])]]
 window = sg.Window('Loans Manangement', default_element_size=(32,1)).Layout(layout)
 
 
@@ -40,7 +38,6 @@ while True:
     print(botao,valores)
     if botao == 'Cadastrar':
         mod.cadastrar(valores)
-
     elif botao == 'Buscar':
         resultado = mod.buscar_nome(valores[0])
         janela_resultado = sg.Window("Loans Manangement").Layout(tela_informacoes(resultado))
@@ -48,7 +45,3 @@ while True:
         if botao_busca == 'Excluir':
             mod.exlcuir_emprestimo(resultado)
             print(mod.EMPRESTIMOS)
-
-    elif botao is None or botao == 'Cancelar':
-        break
-

@@ -2,9 +2,10 @@
 Módulo contendo toda lógica do sistema de emprestimos
 """
 import pickle
+import PySimpleGUI as sg
 from datetime import datetime
 from operator import itemgetter
-import PySimpleGUI as sg
+
 
 try:
     with open('dadosEmprestimos.bin', 'rb') as ler:
@@ -59,7 +60,6 @@ def buscar_nome(nome):
         if nome.lower() in emprestimo['nome'].lower():
             return emprestimo
 
-
 def gravar_dados():
     """
     Função irar escrever os dados, em binário, no disco da máquina.
@@ -108,3 +108,4 @@ def exlcuir_emprestimo(emprestimo):
     """
     EMPRESTIMOS.remove(emprestimo)
     return 0
+
