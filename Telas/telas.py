@@ -17,3 +17,5 @@ def tela_cadastro():
                 ]
 
 
+def tela_lista():
+    return []

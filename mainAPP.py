@@ -18,9 +18,7 @@ Projeto de software - Tecnicas de programacao II
 4 -Modulos que compoe o software: descrever a funçao de cada arquivo adicional que compoe o software
     - Modules.py: Esse modulo fornece todas funções para salvar e ler (os dados da aplicação em arquivo,
      usando a biblioteca Pickle), cadastrar, listar cadastros, buscar por nome, ano e mes + ano(usando dicionario
-     e modulo datetime ),
-
-    - Cadastrar
+     e modulo datetime ).
 '''
 
 
