@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="285c7318-8b12-4149-ae22-bff2393fb256" name="Default Changelist" comment="Modificações no cadastro, adicionando tratamento de erro e simplificação do código da tela de casdastro">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Modules.py" beforeDir="false" afterPath="$PROJECT_DIR$/modules.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Telas/telas.py" beforeDir="false" afterPath="$PROJECT_DIR$/Telas/telas.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mainAPP.py" beforeDir="false" afterPath="$PROJECT_DIR$/mainAPP.py" afterDir="false" />
-    </list>
+    <list default="true" id="285c7318-8b12-4149-ae22-bff2393fb256" name="Default Changelist" comment="Modificações no cadastro, adicionando tratamento de erro e simplificação do código da tela de casdastro" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,7 +23,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/modules.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1428">
@@ -42,7 +37,7 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test_Modules.py">
+        <entry file="file://$PROJECT_DIR$/test_modules.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-10">
               <caret line="9" selection-start-line="9" selection-end-line="9" />
@@ -50,10 +45,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Telas/telas.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
+            <state relative-caret-position="177">
               <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
@@ -81,7 +76,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/modules.py" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/test_Modules.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/test_modules.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/Telas/telas.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/mainAPP.py" root0="SKIP_INSPECTION" />
   </component>
@@ -224,7 +219,7 @@
       <workItem from="1549480722248" duration="4042000" />
       <workItem from="1549555423035" duration="3196000" />
       <workItem from="1549566426598" duration="5990000" />
-      <workItem from="1549641751322" duration="6264000" />
+      <workItem from="1549641751322" duration="6565000" />
     </task>
     <task id="LOCAL-00001" summary="Modificações no cadastro, adicionando tratamento de erro e simplificação do código da tela de casdastro">
       <created>1549479234899</created>
@@ -237,18 +232,17 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24091000" />
+    <option name="totallyTimeSpent" value="24392000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1603631" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1603631" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3293718" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3293718" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3293718" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39898133" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -333,17 +327,6 @@
     <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1428">
-          <caret line="84" lean-forward="true" selection-start-line="84" selection-end-line="84" />
-          <folding>
-            <element signature="e#62#75#0" expanded="true" />
-            <marker date="1549647719101" expanded="true" signature="178:182" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mainAPP.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
@@ -351,19 +334,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test_Modules.py">
+    <entry file="file://$PROJECT_DIR$/Telas/telas.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_modules.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-10">
           <caret line="9" selection-start-line="9" selection-end-line="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Telas/telas.py">
+    <entry file="file://$PROJECT_DIR$/modules.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+        <state relative-caret-position="1428">
+          <caret line="84" lean-forward="true" selection-start-line="84" selection-end-line="84" />
           <folding>
-            <element signature="e#0#21#0" expanded="true" />
+            <element signature="e#62#75#0" expanded="true" />
+            <marker date="1549647719101" expanded="true" signature="178:182" ph="..." />
           </folding>
         </state>
       </provider>
