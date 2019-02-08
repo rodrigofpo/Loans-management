@@ -1,0 +1,8 @@
+[
+  "test_Modules.py::test_cadastro",
+  "test_Modules.py::test_listar_emprestimos",
+  "test_Modules.py::test_buscar_nome",
+  "test_Modules.py::test_gravar_dados",
+  "test_Modules.py::test_ler_dados",
+  "test_Modules.py::test_exluir_emprestimo"
+]
