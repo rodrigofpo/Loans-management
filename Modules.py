@@ -6,10 +6,9 @@ import PySimpleGUI as sg
 from datetime import datetime
 from operator import itemgetter
 
-
 try:
-    with open('dadosEmprestimos.bin', 'rb') as ler:
-        EMPRESTIMOS = pickle.load(ler)
+    with open('dadosEmprestimos.bin', 'rb') as arquivo:
+        EMPRESTIMOS = pickle.load(arquivo)
 except FileNotFoundError:
     EMPRESTIMOS = []
 
@@ -19,6 +18,7 @@ def cadastrar(informacoes):
     Esta função irá passar os dados de uma lista para um dicionário,
     e passará ele para a lista contendo todos emprestimos.
     :param informacoes: a função receberá uma lista de strings
+    :return: 0 para testes.
     """
     try:
         nome = informacoes[0]
@@ -42,6 +42,26 @@ def cadastrar(informacoes):
         return -1
 
 
+def editar_emprestimo(identificador, novas_informarcoes):
+    """
+    Função que atualizará dados de um emprestimo já realizado
+    :param identificador: recebe o nome em forma de string
+    :param novas_informarcoes: recebe uma lista, das novas informações do emprestimo
+    :return: 0, para testes
+    """
+    for emprestimo in EMPRESTIMOS:
+        if identificador == emprestimo['nome']:
+            emprestimo['nome'] = novas_informarcoes[0]
+            emprestimo['telefone'] = novas_informarcoes[1]
+            emprestimo['celular'] = novas_informarcoes[2]
+            emprestimo['email'] = novas_informarcoes[3]
+            emprestimo['vivencia'] = novas_informarcoes[4]
+            data = novas_informarcoes[5]
+            emprestimo['data'] = datetime.strptime(data, '%d/%m/%Y').date()
+            emprestimo['item'] = novas_informarcoes[6]
+
+
+
 def listar_emprestimos():
     """
     Esta é para quando se quiser listar todos os emprestimos, ainda, cadastrados no sistema
@@ -54,16 +74,28 @@ def buscar_nome(nome):
     """
     Função que irá atrás de um nome recebido, e verificará se está na lista de emprestimos
     :param nome: recebe uma string, que será o nome para quem emprestou
-    :return: retornará o dicionário, contendo o nome pesquisado
+    :return: o dicionário, contendo o nome pesquisado
     """
     for emprestimo in EMPRESTIMOS:
-        if nome.lower() in emprestimo['nome'].lower():
+        if nome in emprestimo['nome']:
             return emprestimo
+
+
+def get_nomes():
+    """
+    Função que listará todos os nomes, na lista global de emprestimos.
+    :return: a lista com todos os nomes
+    """
+    lista_nomes = []
+    for emprestimo in EMPRESTIMOS:
+        lista_nomes.append(emprestimo['nome'])
+    return lista_nomes
+
 
 def gravar_dados():
     """
     Função irar escrever os dados, em binário, no disco da máquina.
-    :return: retorna 0, para testes
+    :return: 0, para testes
     """
     with open('dadosEmprestimos.bin', 'wb') as arquivo:
         pickle.dump(EMPRESTIMOS, arquivo)
@@ -73,7 +105,7 @@ def gravar_dados():
 def ler_dados():
     """
     Função irar ler os dados, em binário, no disco da máquina.
-    :return: retorna 0, para testes
+    :return: 0, para testes
     """
     try:
         with open('dadosEmprestimos.bin', 'rb') as arquivo:
@@ -89,7 +121,7 @@ def printar_aux(emprestimo):
     """
     Função para deburação do código
     :param emprestimo: um dicionário, que estará na lista de emprestimos
-    :return: retorna 0, para testes
+    :return: 0, para testes
     """
     print("Nome:", emprestimo['nome'])
     print("Telefone:", emprestimo['telefone'])
@@ -100,12 +132,14 @@ def printar_aux(emprestimo):
     print("Item:", emprestimo['item'])
 
 
-def exlcuir_emprestimo(emprestimo):
+def exlcuir_emprestimo(nome):
     """
     Funcionará em auxílio com o função busca, caso a pessoa deseje excluir o empréstimo que buscou.
     :param emprestimo: receberá um dicionário, contento o emprestimo que deseja excluir
-    :return: retorna 0, para testes
+    :return: 0, para testes
     """
-    EMPRESTIMOS.remove(emprestimo)
-    return 0
+    for emprestimo in EMPRESTIMOS:
+        if nome == emprestimo['nome']:
+            EMPRESTIMOS.remove(emprestimo)
+            return sg.Popup("Apagado com sucesso!")
 
