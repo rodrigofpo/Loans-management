@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="285c7318-8b12-4149-ae22-bff2393fb256" name="Default Changelist" comment="Modificações no cadastro, adicionando tratamento de erro e simplificação do código da tela de casdastro">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Telas/telas.py" beforeDir="false" afterPath="$PROJECT_DIR$/Telas/telas.py" afterDir="false" />
-    </list>
+    <list default="true" id="285c7318-8b12-4149-ae22-bff2393fb256" name="Default Changelist" comment="Modificações no cadastro, adicionando tratamento de erro e simplificação do código da tela de casdastro" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,11 +22,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mainAPP.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="18">
+            <state relative-caret-position="459">
               <caret line="29" selection-start-line="29" selection-end-line="29" />
-              <folding>
-                <element signature="e#941#967#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -38,7 +32,7 @@
         <entry file="file://$PROJECT_DIR$/Modules.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="289">
-              <caret line="17" column="68" lean-forward="true" selection-start-line="17" selection-start-column="68" selection-end-line="17" selection-end-column="68" />
+              <caret line="17" column="68" selection-start-line="17" selection-start-column="68" selection-end-line="17" selection-end-column="68" />
               <folding>
                 <element signature="e#62#75#0" expanded="true" />
               </folding>
@@ -49,7 +43,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Telas/telas.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-645">
+            <state relative-caret-position="425">
               <caret line="25" selection-start-line="25" selection-end-line="25" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
@@ -113,11 +107,10 @@
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
-    <navigator proportions="" version="1">
+    <navigator currentView="Scope" currentSubView="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope" proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -129,6 +122,22 @@
               <item name="Loans-management" type="b2602c69:ProjectViewProjectNode" />
               <item name="Loans-management" type="462c0819:PsiDirectoryNode" />
               <item name="Telas" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope">
+        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
+          <expand>
+            <path>
+              <item name="Loans-management" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+            </path>
+            <path>
+              <item name="Loans-management" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="Telas" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
           </expand>
           <select />
@@ -299,6 +308,7 @@
       <workItem from="1549641751322" duration="6565000" />
       <workItem from="1549649219385" duration="7132000" />
       <workItem from="1549893321646" duration="13115000" />
+      <workItem from="1549916306273" duration="251000" />
     </task>
     <task id="LOCAL-00001" summary="Modificações no cadastro, adicionando tratamento de erro e simplificação do código da tela de casdastro">
       <created>1549479234899</created>
@@ -311,12 +321,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44639000" />
+    <option name="totallyTimeSpent" value="44890000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16490166" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16717096" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -330,7 +341,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.3293718" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Regex Tester" order="10" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50075644" side_tool="true" visible="true" weight="0.28183362" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50075644" side_tool="true" weight="0.28183362" />
       <window_info anchor="bottom" id="Terminal" order="12" weight="0.55687606" />
       <window_info anchor="bottom" id="Python Console" order="13" weight="0.3293718" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -437,17 +448,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/mainAPP.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
+        <state relative-caret-position="459">
           <caret line="29" selection-start-line="29" selection-end-line="29" />
-          <folding>
-            <element signature="e#941#967#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Telas/telas.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-645">
+        <state relative-caret-position="425">
           <caret line="25" selection-start-line="25" selection-end-line="25" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
@@ -458,7 +466,7 @@
     <entry file="file://$PROJECT_DIR$/Modules.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
-          <caret line="17" column="68" lean-forward="true" selection-start-line="17" selection-start-column="68" selection-end-line="17" selection-end-column="68" />
+          <caret line="17" column="68" selection-start-line="17" selection-start-column="68" selection-end-line="17" selection-end-column="68" />
           <folding>
             <element signature="e#62#75#0" expanded="true" />
           </folding>
