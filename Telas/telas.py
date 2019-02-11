@@ -23,7 +23,7 @@ def tela_cadastro():
     elif botao == 'Cancelar':
         janela.Close()
 
-
+ 
 def tela_atualizacao(informacao_antiga):
     layout = [
         [sg.Text("Atualizar emprestimo")],
