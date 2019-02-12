@@ -1,4 +1,4 @@
-from modules import *
+from Modules import *
 
 
 def test_cadastro():
@@ -6,7 +6,7 @@ def test_cadastro():
 
 
 def test_listar_emprestimos():
-    assert len(listar_emprestimos()) == len(mod.EMPRESTIMOS)
+    assert len(listar_emprestimos()) == len(EMPRESTIMOS)
 
 
 def test_buscar_nome():
@@ -20,6 +20,7 @@ def test_gravar_dados():
 
 def test_ler_dados():
     assert ler_dados() == 0
+
 
 def test_exluir_emprestimo():
     assert exlcuir_emprestimo(EMPRESTIMOS[0]) == 0

@@ -1,4 +1,4 @@
-import modules as mod
+import Modules as mod
 import PySimpleGUI as sg
 
 
@@ -68,8 +68,8 @@ def tela_busca():
 
 def tela_excluir():
     layout = [[sg.Text('Tem certeza que deseja excluir?')],
-              [sg.Button("Sim", button_color=('white', 'springgreen4')),
-               sg.Button("Não", button_color=('white', 'firebrick3'))]]
+              [sg.Button("Sim", size=(8,1), button_color=('white', 'springgreen4'), pad=(20,1)),
+               sg.Button("Não", size=(8,1), button_color=('white', 'firebrick3'))]]
     janela = sg.Window('Excluir').Layout(layout)
     botao, evento = janela.Read()
     if botao == 'Sim':
