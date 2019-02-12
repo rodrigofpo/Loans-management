@@ -64,7 +64,6 @@ def editar_emprestimo(identificador, novas_informarcoes):
     return -2
 
 
-
 def listar_emprestimos():
     """
     Esta é para quando se quiser listar todos os emprestimos, ainda, cadastrados no sistema
@@ -83,6 +82,18 @@ def buscar_nome(nome):
         if nome in emprestimo['nome']:
             return emprestimo
     return -3
+
+
+def get_nomes():
+    """
+    Função que listará todos os nomes, na lista global de emprestimos.
+    :return: a lista com todos os nomes
+    """
+    lista_nomes = []
+    for emprestimo in EMPRESTIMOS:
+        lista_nomes.append(emprestimo['nome'])
+    return lista_nomes
+
 
 
 def get_nomes():
@@ -149,5 +160,3 @@ def exlcuir_emprestimo(nome):
             gravar_dados()
             sg.Popup("Apagado com sucesso!", button_color=('white', 'springgreen4'))
     return 0
-
-

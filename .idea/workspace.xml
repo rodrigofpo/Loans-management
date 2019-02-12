@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="285c7318-8b12-4149-ae22-bff2393fb256" name="Default Changelist" comment="Modificações no cadastro, adicionando tratamento de erro e simplificação do código da tela de casdastro" />
+    <list default="true" id="285c7318-8b12-4149-ae22-bff2393fb256" name="Default Changelist" comment="Modificações no cadastro, adicionando tratamento de erro e simplificação do código da tela de casdastro">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.pytest_cache/v/cache/nodeids" beforeDir="false" afterPath="$PROJECT_DIR$/.pytest_cache/v/cache/nodeids" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Modules.py" beforeDir="false" afterPath="$PROJECT_DIR$/Modules.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Telas/telas.py" beforeDir="false" afterPath="$PROJECT_DIR$/Telas/telas.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dadosEmprestimos.bin" beforeDir="false" afterPath="$PROJECT_DIR$/dadosEmprestimos.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mainAPP.py" beforeDir="false" afterPath="$PROJECT_DIR$/mainAPP.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,7 +20,7 @@
     <SUITE FILE_PATH="coverage/Loans_management$telas.coverage" NAME="telas Coverage Results" MODIFIED="1549904294079" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Telas" />
     <SUITE FILE_PATH="coverage/Loans_management$modules.coverage" NAME="modules Coverage Results" MODIFIED="1549906307479" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Loans_management$list_box_test__1_.coverage" NAME="list_box_test (1) Coverage Results" MODIFIED="1549653161344" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Loans_management$mainAPP.coverage" NAME="mainAPP Coverage Results" MODIFIED="1549914475234" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Loans_management$mainAPP.coverage" NAME="mainAPP Coverage Results" MODIFIED="1549995030286" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Loans_management$testes.coverage" NAME="testes Coverage Results" MODIFIED="1549567301994" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Loans_management$list_box_test__2_.coverage" NAME="list_box_test (2) Coverage Results" MODIFIED="1549653269408" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Telas" />
   </component>
@@ -22,17 +29,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mainAPP.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="29" selection-start-line="29" selection-end-line="29" />
+            <state relative-caret-position="-492">
+              <caret line="51" column="35" selection-start-line="51" selection-start-column="35" selection-end-line="51" selection-end-column="35" />
+              <folding>
+                <element signature="e#1065#1091#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Modules.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="68" selection-start-line="17" selection-start-column="68" selection-end-line="17" selection-end-column="68" />
+            <state relative-caret-position="1020">
+              <caret line="60" column="54" selection-start-line="60" selection-start-column="54" selection-end-line="60" selection-end-column="54" />
               <folding>
                 <element signature="e#62#75#0" expanded="true" />
               </folding>
@@ -40,14 +50,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Telas/telas.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="25" selection-start-line="25" selection-end-line="25" />
+            <state relative-caret-position="1173">
+              <caret line="69" column="59" selection-start-line="69" selection-start-column="59" selection-end-line="69" selection-end-column="59" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test_modules.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="442">
+              <caret line="26" selection-start-line="26" selection-end-line="26" />
             </state>
           </provider>
         </entry>
@@ -67,6 +86,11 @@
     </findStrings>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Romulogss &lt;romulo.gabss@gmail.com&gt;" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
@@ -87,14 +111,15 @@
         <option value="$PROJECT_DIR$/testes.py" />
         <option value="$PROJECT_DIR$/Tests/tests_Modules.py" />
         <option value="$PROJECT_DIR$/Tests/test_Modules.py" />
-        <option value="$PROJECT_DIR$/Modules.py" />
         <option value="$PROJECT_DIR$/test_Modules.py" />
         <option value="$PROJECT_DIR$/Telas/ListBo.py" />
         <option value="$PROJECT_DIR$/list_box_test.py" />
         <option value="$PROJECT_DIR$/Telas/list_box_test.py" />
-        <option value="$PROJECT_DIR$/Telas/telas.py" />
-        <option value="$PROJECT_DIR$/mainAPP.py" />
         <option value="$PROJECT_DIR$/modules.py" />
+        <option value="$PROJECT_DIR$/test_modules.py" />
+        <option value="$PROJECT_DIR$/mainAPP.py" />
+        <option value="$PROJECT_DIR$/Modules.py" />
+        <option value="$PROJECT_DIR$/Telas/telas.py" />
         <option value="$PROJECT_DIR$/Telas/telas.py" />
       </list>
     </option>
@@ -111,22 +136,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="Loans-management" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Loans-management" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Loans-management" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Loans-management" type="462c0819:PsiDirectoryNode" />
-              <item name="Telas" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="Scope">
         <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
           <expand>
@@ -138,6 +147,22 @@
               <item name="Loans-management" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
               <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
               <item name="Telas" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Loans-management" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Loans-management" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Loans-management" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Loans-management" type="462c0819:PsiDirectoryNode" />
+              <item name="Telas" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -308,7 +333,9 @@
       <workItem from="1549641751322" duration="6565000" />
       <workItem from="1549649219385" duration="7132000" />
       <workItem from="1549893321646" duration="13115000" />
-      <workItem from="1549916306273" duration="251000" />
+      <workItem from="1549916306273" duration="1877000" />
+      <workItem from="1549923444455" duration="496000" />
+      <workItem from="1549990663094" duration="3600000" />
     </task>
     <task id="LOCAL-00001" summary="Modificações no cadastro, adicionando tratamento de erro e simplificação do código da tela de casdastro">
       <created>1549479234899</created>
@@ -317,17 +344,24 @@
       <option name="project" value="LOCAL" />
       <updated>1549479234899</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Tratamento de erros">
+      <created>1549995358281</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1549995358281</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44890000" />
+    <option name="totallyTimeSpent" value="50612000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16717096" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17170954" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -396,7 +430,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Modificações no cadastro, adicionando tratamento de erro e simplificação do código da tela de casdastro" />
-    <option name="LAST_COMMIT_MESSAGE" value="Modificações no cadastro, adicionando tratamento de erro e simplificação do código da tela de casdastro" />
+    <MESSAGE value="Tratamento de erros" />
+    <option name="LAST_COMMIT_MESSAGE" value="Tratamento de erros" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/mainAPP_1.py" />
@@ -424,13 +459,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test_modules.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Telas/list_box_test.py" />
     <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -446,29 +474,39 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mainAPP.py">
+    <entry file="file://$PROJECT_DIR$/test_modules.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="29" selection-start-line="29" selection-end-line="29" />
+        <state relative-caret-position="442">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Telas/telas.py">
+    <entry file="file://$PROJECT_DIR$/mainAPP.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" selection-start-line="25" selection-end-line="25" />
+        <state relative-caret-position="-492">
+          <caret line="51" column="35" selection-start-line="51" selection-start-column="35" selection-end-line="51" selection-end-column="35" />
           <folding>
-            <element signature="e#0#21#0" expanded="true" />
+            <element signature="e#1065#1091#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Modules.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="68" selection-start-line="17" selection-start-column="68" selection-end-line="17" selection-end-column="68" />
+        <state relative-caret-position="1020">
+          <caret line="60" column="54" selection-start-line="60" selection-start-column="54" selection-end-line="60" selection-end-column="54" />
           <folding>
             <element signature="e#62#75#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Telas/telas.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1173">
+          <caret line="69" column="59" selection-start-line="69" selection-start-column="59" selection-end-line="69" selection-end-column="59" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
           </folding>
         </state>
       </provider>
