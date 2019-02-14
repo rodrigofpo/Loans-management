@@ -25,7 +25,7 @@ Projeto de software - Tecnicas de programacao II
 
 #aqui começa o software ...
 import Telas.telas as tela
-import modules as mod
+import Modules as mod
 import PySimpleGUI as sg
 
 NOMES = mod.get_nomes()
@@ -50,26 +50,27 @@ janela = sg.Window("Loans-Management", size=(550, 450), text_justification=('cen
 
 while True:
     evento, valores = janela.Read()
-    print(valores)
     if evento == 'lista':
-        nome = valores['lista'][0]
-        emprestimo = mod.buscar_nome(nome)
-        nome = "Nome: " + emprestimo['nome']
-        telefone = "Telefone: " + emprestimo['telefone']
-        celular = "Celular: " + emprestimo['celular']
-        email = "E-mail: " + emprestimo['email']
-        vivencia = "Vivencia: " + emprestimo['vivencia']
-        data = "Data: " + emprestimo['data'].strftime("%d/%m/%Y")
-        item = "Item: " + emprestimo['item']
+        try:
+            nome = valores['lista'][0]
+            emprestimo = mod.buscar_nome(nome)
+            nome = "Nome: " + emprestimo['nome']
+            telefone = "Telefone: " + emprestimo['telefone']
+            celular = "Celular: " + emprestimo['celular']
+            email = "E-mail: " + emprestimo['email']
+            vivencia = "Vivencia: " + emprestimo['vivencia']
+            data = "Data: " + emprestimo['data'].strftime("%d/%m/%Y")
+            item = "Item: " + emprestimo['item']
 
-        janela.FindElement('nome').Update(nome)
-        janela.FindElement('telefone').Update(telefone)
-        janela.FindElement('celular').Update(celular)
-        janela.FindElement('data').Update(data)
-        janela.FindElement('item').Update(item)
-        janela.FindElement('email').Update(email)
-        janela.FindElement('vivencia').Update(vivencia)
-
+            janela.FindElement('nome').Update(nome)
+            janela.FindElement('telefone').Update(telefone)
+            janela.FindElement('celular').Update(celular)
+            janela.FindElement('data').Update(data)
+            janela.FindElement('item').Update(item)
+            janela.FindElement('email').Update(email)
+            janela.FindElement('vivencia').Update(vivencia)
+        except IndexError:
+            pass
     if evento == 'Cadastrar':
         cadastro = tela.tela_cadastro()
         if type(cadastro) == list:

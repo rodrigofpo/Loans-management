@@ -59,7 +59,9 @@ def editar_emprestimo(identificador, novas_informarcoes):
             data = novas_informarcoes[5]
             emprestimo['data'] = datetime.strptime(data, '%d/%m/%Y').date()
             emprestimo['item'] = novas_informarcoes[6]
-
+            gravar_dados()
+            return 0
+    return -2
 
 
 def listar_emprestimos():
@@ -79,6 +81,19 @@ def buscar_nome(nome):
     for emprestimo in EMPRESTIMOS:
         if nome in emprestimo['nome']:
             return emprestimo
+    return -3
+
+
+def get_nomes():
+    """
+    Função que listará todos os nomes, na lista global de emprestimos.
+    :return: a lista com todos os nomes
+    """
+    lista_nomes = []
+    for emprestimo in EMPRESTIMOS:
+        lista_nomes.append(emprestimo['nome'])
+    return lista_nomes
+
 
 
 def get_nomes():
@@ -100,6 +115,7 @@ def gravar_dados():
     with open('dadosEmprestimos.bin', 'wb') as arquivo:
         pickle.dump(EMPRESTIMOS, arquivo)
         return 0
+    return -4
 
 
 def ler_dados():
@@ -141,5 +157,6 @@ def exlcuir_emprestimo(nome):
     for emprestimo in EMPRESTIMOS:
         if nome == emprestimo['nome']:
             EMPRESTIMOS.remove(emprestimo)
-            return sg.Popup("Apagado com sucesso!")
-
+            gravar_dados()
+            sg.Popup("Apagado com sucesso!", button_color=('white', 'springgreen4'))
+    return 0
