@@ -1,8 +1,15 @@
 import Modules as mod
 import PySimpleGUI as sg
 
+"""
+Módulo contento as telas adicionais, do programa.
+"""
 
 def tela_cadastro():
+    """
+    Tela para cadastro de novo emprestimo.
+    :return: uma lista contento as informações inputadas.
+    """
     layout = [
                 [sg.Text("Cadastrar emprestimo")],
                 [sg.Text("Nome", size=(15, 1)), sg.InputText()],
@@ -25,6 +32,11 @@ def tela_cadastro():
 
 
 def tela_atualizacao(informacao_antiga):
+    """
+    Tela para atualizar informações de um emprestimo já cadastrado.
+    :param informacao_antiga: um dicionário contento todas as antigas informações do emprestimo.
+    :return: uma lista de valores, contento o conteúdo dos InputText.
+    """
     layout = [
         [sg.Text("Atualizar emprestimo")],
         [sg.Text("Nome", size=(15, 1)), sg.InputText(default_text=informacao_antiga['nome'], do_not_clear=True)],
@@ -67,6 +79,10 @@ def tela_busca():
 
 
 def tela_excluir():
+    """
+    Tela para confirmação da exclusão de um emprestimo.
+    :return: um valor booleano, para confirmação ou negação da ação.
+    """
     layout = [[sg.Text('Tem certeza que deseja excluir?')],
               [sg.Button("Sim", size=(8,1), button_color=('white', 'springgreen4'), pad=(20,1)),
                sg.Button("Não", size=(8,1), button_color=('white', 'firebrick3'))]]
@@ -78,3 +94,4 @@ def tela_excluir():
     else:
         janela.Close()
         return False
+

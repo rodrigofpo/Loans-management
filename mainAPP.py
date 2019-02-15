@@ -29,8 +29,7 @@ import Modules as mod
 import PySimpleGUI as sg
 
 NOMES = mod.get_nomes()
-coluna_detalhes = [[sg.Text("Loans-Management", size=(30,1))],
-                   [sg.Text('', key='nome', size=(30, 1), pad=(1,5))],
+coluna_detalhes = [[sg.Text('', key='nome', size=(30, 1), pad=(1,5))],
                    [sg.Text('', key='telefone', size=(30, 1), pad=(1,8))],
                    [sg.Text('', key='celular', size=(30, 1), pad=(1,8))],
                    [sg.Text('', key='email', size=(30, 1), pad=(1,8))],
@@ -40,13 +39,13 @@ coluna_detalhes = [[sg.Text("Loans-Management", size=(30,1))],
                    [sg.Button("Editar", size=(8,1), button_color=('white', 'springgreen4'), pad=(10,20)),
                     sg.Button("Apagar", size=(8,1), pad=(50,1), button_color=('white', 'springgreen4'))]]
 
-coluna_nomes = [[sg.Listbox(values= NOMES, key='lista', change_submits=True, size=(90, 25))]]
+coluna_nomes = [[sg.Listbox(values= NOMES, key='lista', change_submits=True, size=(100, 100))]]
 
-tela_principal = [[sg.In(size=(30,1)), sg.Button('Buscar', size=(8,1))],
-                  [sg.Column(coluna_detalhes), sg.Column(coluna_nomes, size=(90,300))],
+tela_principal = [[sg.In(size=(25,1)), sg.Button('Buscar', size=(7,1))],
+                  [sg.Frame("Loans-Management", coluna_detalhes), sg.Column(coluna_nomes, size=(100,100))],
                   [sg.Button("Cadastrar",button_color=('white', 'springgreen4'))]]
 
-janela = sg.Window("Loans-Management", size=(550, 450), text_justification=('center')).Layout(tela_principal)
+janela = sg.Window("Loans-Management", size=(625, 425), text_justification=('center')).Layout(tela_principal)
 
 while True:
     evento, valores = janela.Read()
@@ -92,5 +91,12 @@ while True:
             mod.exlcuir_emprestimo(valores['lista'][0])
             NOMES = mod.get_nomes()
             janela.FindElement('lista').Update(NOMES)
+            janela.FindElement('nome').Update('')
+            janela.FindElement('telefone').Update('')
+            janela.FindElement('celular').Update('')
+            janela.FindElement('data').Update('')
+            janela.FindElement('item').Update('')
+            janela.FindElement('email').Update('')
+            janela.FindElement('vivencia').Update('')
     elif evento is None or evento == 'Cancelar':
         break
