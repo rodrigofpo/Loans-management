@@ -28,9 +28,8 @@ import Telas.telas as tela
 import Modules as mod
 import PySimpleGUI as sg
 
-NOMES = mod.get_nomes()
-coluna_detalhes = [[sg.Text("Loans-Management", size=(30,1))],
-                   [sg.Text('', key='nome', size=(30, 1), pad=(1,5))],
+NOMES = mod.get_informacoes()
+coluna_detalhes = [[sg.Text('', key='nome', size=(30, 1), pad=(1,5))],
                    [sg.Text('', key='telefone', size=(30, 1), pad=(1,8))],
                    [sg.Text('', key='celular', size=(30, 1), pad=(1,8))],
                    [sg.Text('', key='email', size=(30, 1), pad=(1,8))],
@@ -40,13 +39,16 @@ coluna_detalhes = [[sg.Text("Loans-Management", size=(30,1))],
                    [sg.Button("Editar", size=(8,1), button_color=('white', 'springgreen4'), pad=(10,20)),
                     sg.Button("Apagar", size=(8,1), pad=(50,1), button_color=('white', 'springgreen4'))]]
 
-coluna_nomes = [[sg.Listbox(values= NOMES, key='lista', change_submits=True, size=(90, 25))]]
+coluna_nomes = [[sg.Button('Buscar', size=(8,1), pad=(100,1), button_color=('white', 'springgreen4'))],
+                [sg.Text("", size=(25,1), key='buscas'),
+                 sg.Button("", key='botao_busca', visible=False, size=(6,2),  button_color=('white', 'firebrick3'))],
+                [sg.Listbox(values= NOMES, key='lista', change_submits=True, size=(130, 100))]]
 
-tela_principal = [[sg.In(size=(30,1)), sg.Button('Buscar', size=(8,1))],
-                  [sg.Column(coluna_detalhes), sg.Column(coluna_nomes, size=(90,300))],
-                  [sg.Button("Cadastrar",button_color=('white', 'springgreen4'))]]
+tela_principal = [[sg.Frame("Loans-Management", coluna_detalhes), sg.Column(coluna_nomes, size=(130,100))],
+                  [sg.Button("Cadastrar",button_color=('white', 'springgreen4'), size=(8,1)),
+                   sg.Button("Sair", button_color=('white', 'firebrick3'), size=(8,1), pad=(70,1))]]
 
-janela = sg.Window("Loans-Management", size=(550, 450), text_justification=('center')).Layout(tela_principal)
+janela = sg.Window("Loans-Management", size=(630, 400), text_justification=('center')).Layout(tela_principal)
 
 while True:
     evento, valores = janela.Read()
@@ -71,26 +73,86 @@ while True:
             janela.FindElement('vivencia').Update(vivencia)
         except IndexError:
             pass
-    if evento == 'Cadastrar':
+    elif evento == 'Buscar':
+        botao_busca = tela.tela_escolha_busca()
+        try:
+            if botao_busca == "Nome":
+                nome_busca = tela.tela_busca(botao_busca)
+                if len(nome_busca) != 0:
+                    NOMES = mod.get_informacoes(nome=nome_busca)
+                    txt_busca = "Buscando por " + nome_busca
+                    janela.FindElement('buscas').Update(txt_busca)
+                    janela.FindElement('botao_busca').Update(text='Cancelar busca', visible=True)
+                    janela.FindElement('lista').Update(NOMES)
+            elif botao_busca == 'Item':
+                item_busca = tela.tela_busca(botao_busca)
+                if len(item_busca) != 0:
+                    NOMES = mod.get_informacoes(item=item_busca)
+                    txt_busca = "Buscando pelo item " + item_busca
+                    janela.FindElement('buscas').Update(txt_busca)
+                    janela.FindElement('botao_busca').Update(text='Cancelar busca', visible=True)
+                    janela.FindElement('lista').Update(NOMES)
+            elif botao_busca == 'Ano':
+                ano_busca = tela.tela_busca(botao_busca)
+                if type(ano_busca) != str:
+                    NOMES = mod.get_informacoes(ano=ano_busca)
+                    txt_busca = "Buscando pelo ano " + str(ano_busca)
+                    janela.FindElement('buscas').Update(txt_busca)
+                    janela.FindElement('botao_busca').Update(text='Cancelar busca', visible=True)
+                    janela.FindElement('lista').Update(NOMES)
+            elif botao_busca == 'Mes + Ano':
+                ano_mes_busca = tela.tela_busca(botao_busca)
+                if type(ano_mes_busca) != str:
+                    mes = ano_mes_busca.month
+                    ano = ano_mes_busca.year
+                    NOMES = mod.get_informacoes(ano = ano, mes= mes)
+                    txt_busca = "Buscando pelo mes " + str(mes) + " e ano " + str(ano)
+                    janela.FindElement('buscas').Update(txt_busca)
+                    janela.FindElement('botao_busca').Update(text='Cancelar busca', visible=True)
+                    janela.FindElement('lista').Update(NOMES)
+        except TypeError:
+            janela.FindElement('buscas').Update('')
+            janela.FindElement('botao_busca').Update(visible=False)
+            pass
+    elif evento == 'botao_busca':
+        NOMES = mod.get_informacoes()
+        janela.FindElement('buscas').Update('')
+        janela.FindElement('botao_busca').Update(visible=False)
+        janela.FindElement('lista').Update(NOMES)
+
+    elif evento == 'Cadastrar':
         cadastro = tela.tela_cadastro()
         if type(cadastro) == list:
             mod.cadastrar(cadastro)
-            NOMES = mod.get_nomes()
+            NOMES = mod.get_informacoes()
             janela.FindElement('lista').Update(NOMES)
 
     elif evento == 'Editar':
-        emprestimo = mod.buscar_nome(valores['lista'][0])
-        novos_dados = tela.tela_atualizacao(emprestimo)
-        atualizacao = mod.editar_emprestimo(valores['lista'][0], novos_dados)
-        sg.Popup("Atulizado com sucesso", button_color=('white', 'springgreen4'))
-        NOMES = mod.get_nomes()
-        janela.FindElement('lista').Update(NOMES)
-
-    elif evento == 'Apagar':
-        confirmar = tela.tela_excluir()
-        if confirmar:
-            mod.exlcuir_emprestimo(valores['lista'][0])
-            NOMES = mod.get_nomes()
+        try:
+            emprestimo = mod.buscar_nome(valores['lista'][0])
+            novos_dados = tela.tela_atualizacao(emprestimo)
+            atualizacao = mod.editar_emprestimo(valores['lista'][0], novos_dados)
+            sg.Popup("Atulizado com sucesso", button_color=('white', 'springgreen4'))
+            NOMES = mod.get_informacoes()
             janela.FindElement('lista').Update(NOMES)
-    elif evento is None or evento == 'Cancelar':
+        except IndexError:
+            pass
+    elif evento == 'Apagar':
+        try:
+            confirmar = tela.tela_excluir()
+            if confirmar:
+                mod.exlcuir_emprestimo(valores['lista'][0])
+                NOMES = mod.get_informacoes()
+                janela.FindElement('lista').Update(NOMES)
+                janela.FindElement('nome').Update('')
+                janela.FindElement('telefone').Update('')
+                janela.FindElement('celular').Update('')
+                janela.FindElement('data').Update('')
+                janela.FindElement('item').Update('')
+                janela.FindElement('email').Update('')
+                janela.FindElement('vivencia').Update('')
+        except IndexError:
+            pass
+
+    elif evento is None or evento == 'Sair':
         break
