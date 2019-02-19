@@ -43,7 +43,8 @@ coluna_nomes = [[sg.Listbox(values= NOMES, key='lista', change_submits=True, siz
 
 tela_principal = [[sg.In(size=(25,1)), sg.Button('Buscar', size=(7,1))],
                   [sg.Frame("Loans-Management", coluna_detalhes), sg.Column(coluna_nomes, size=(100,100))],
-                  [sg.Button("Cadastrar",button_color=('white', 'springgreen4'))]]
+                  [sg.Button("Cadastrar",button_color=('white', 'springgreen4'), size=(8,1)),
+                   sg.Button(button_text="Sair", button_color=('white', 'firebrick3'), size=(8,1), pad=(70,1))]]
 
 janela = sg.Window("Loans-Management", size=(625, 425), text_justification=('center')).Layout(tela_principal)
 
@@ -98,5 +99,5 @@ while True:
             janela.FindElement('item').Update('')
             janela.FindElement('email').Update('')
             janela.FindElement('vivencia').Update('')
-    elif evento is None or evento == 'Cancelar':
+    elif evento is None or evento == 'Sair':
         break

@@ -120,6 +120,20 @@ def ler_dados():
         return -1
 
 
+def exlcuir_emprestimo(nome):
+    """
+    Funcionará em auxílio com o função busca, caso a pessoa deseje excluir o empréstimo que buscou.
+    :param emprestimo: receberá um dicionário, contento o emprestimo que deseja excluir
+    :return: 0, para testes
+    """
+    for emprestimo in EMPRESTIMOS:
+        if nome == emprestimo['nome']:
+            EMPRESTIMOS.remove(emprestimo)
+            gravar_dados()
+            sg.Popup("Apagado com sucesso!", button_color=('white', 'springgreen4'))
+    return 0
+
+
 #auxiliares
 def printar_aux(emprestimo):
     """
@@ -135,16 +149,3 @@ def printar_aux(emprestimo):
     print("Data:", emprestimo['data'].strftime("%d/%m/%Y"))
     print("Item:", emprestimo['item'])
 
-
-def exlcuir_emprestimo(nome):
-    """
-    Funcionará em auxílio com o função busca, caso a pessoa deseje excluir o empréstimo que buscou.
-    :param emprestimo: receberá um dicionário, contento o emprestimo que deseja excluir
-    :return: 0, para testes
-    """
-    for emprestimo in EMPRESTIMOS:
-        if nome == emprestimo['nome']:
-            EMPRESTIMOS.remove(emprestimo)
-            gravar_dados()
-            sg.Popup("Apagado com sucesso!", button_color=('white', 'springgreen4'))
-    return 0
