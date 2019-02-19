@@ -84,15 +84,46 @@ def buscar_nome(nome):
     return -3
 
 
-def get_nomes():
+def get_informacoes(mes = '', ano = '', item = '', nome = ''):
     """
-    Função que listará todos os nomes, na lista global de emprestimos.
-    :return: a lista com todos os nomes
+    função que dará uma lista de nomes, de acordo com o que está sendo buscado.
+    :param mes: um objeto datetime.date.month que será passado através da tela de busca.
+    :param ano: um objeto datetime.date.year que será passado através da tela de busca.
+    :param item: uma string que será passado através da tela de busca.
+    :param nome: uma string que será passado através da tela de busca.
+    :return: retorna uma lista de nomes.
     """
     lista_nomes = []
-    for emprestimo in EMPRESTIMOS:
-        lista_nomes.append(emprestimo['nome'])
-    return lista_nomes
+    if mes != '' and ano == '':
+        for emprestimo in EMPRESTIMOS:
+            if mes == emprestimo['data'].month:
+                lista_nomes.append(emprestimo['nome'])
+        return lista_nomes
+    if ano != '' and mes == '':
+        for emprestimo in EMPRESTIMOS:
+            if ano == emprestimo['data'].year:
+                lista_nomes.append(emprestimo['nome'])
+        return lista_nomes
+    if ano != '' and mes != '':
+        for emprestimo in EMPRESTIMOS:
+            if ano == emprestimo['data'].year and mes == emprestimo['data'].month:
+                lista_nomes.append(emprestimo['nome'])
+        return lista_nomes
+    if item != '':
+        for emprestimo in EMPRESTIMOS:
+            if item == emprestimo['item']:
+                lista_nomes.append(emprestimo['nome'])
+        return lista_nomes
+    if nome != '':
+        for emprestimo in EMPRESTIMOS:
+            if nome in emprestimo['nome']:
+                lista_nomes.append(emprestimo['nome'])
+        return lista_nomes
+    if nome == '':
+        for emprestimo in EMPRESTIMOS:
+            lista_nomes.append(emprestimo['nome'])
+        return lista_nomes
+
 
 
 def gravar_dados():
