@@ -95,18 +95,6 @@ def get_nomes():
     return lista_nomes
 
 
-
-def get_nomes():
-    """
-    Função que listará todos os nomes, na lista global de emprestimos.
-    :return: a lista com todos os nomes
-    """
-    lista_nomes = []
-    for emprestimo in EMPRESTIMOS:
-        lista_nomes.append(emprestimo['nome'])
-    return lista_nomes
-
-
 def gravar_dados():
     """
     Função irar escrever os dados, em binário, no disco da máquina.
