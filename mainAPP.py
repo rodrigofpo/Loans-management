@@ -39,16 +39,12 @@ coluna_detalhes = [[sg.Text('', key='nome', size=(30, 1), pad=(1,5))],
                    ]
 coluna_btt = [[sg.Button('Editar', key='Editar',pad=(10,0,5), size=(8,1), button_color=('white', 'springgreen4')), sg.Button('Apagar', key='Apagar', size=(8,1), button_color=('white', 'springgreen4'))]]
 coluna_bt1 = [[sg.Button("Cadastrar",button_color=('white', 'springgreen4'), size=(8,1)), sg.Button("Sair", button_color=('white', 'firebrick3'), size=(8,1))]]
-
 coluna_nomes = [[sg.Button('Buscar', size=(8,1), pad=(25,1), button_color=('white', 'springgreen4')), sg.Button("", key='botao_busca', visible=False, size=(12,1),  button_color=('white', 'firebrick3'))],
                 [sg.Text("", size=(30,2), justification=('center'), key='buscas')],
                 [sg.Listbox(values= NOMES, key='lista', change_submits=True, size=(130, 100))]]
-
 tela_principal = [[sg.Frame("Loans-Management", coluna_detalhes), sg.Column(coluna_nomes, size=(130,100))],                  
                   [sg.Column(coluna_btt, key='Edit', visible=False)],
                   [sg.Column(coluna_bt1, key='Apag', visible=True)]]
-
-
 janela = sg.Window("Loans-Management", size=(630, 400), icon=('/Icon/icon-logo.ico'), text_justification=('center')).Layout(tela_principal)
 
 while True:
@@ -64,7 +60,6 @@ while True:
             vivencia = "Vivencia: " + emprestimo['vivencia']
             data = "Data: " + emprestimo['data'].strftime("%d/%m/%Y")
             item = "Item: " + emprestimo['item']
-
             janela.FindElement('nome').Update(nome)
             janela.FindElement('telefone').Update(telefone)
             janela.FindElement('celular').Update(celular)
