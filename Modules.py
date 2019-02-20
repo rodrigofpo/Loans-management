@@ -49,22 +49,19 @@ def editar_emprestimo(identificador, novas_informarcoes):
     :param novas_informarcoes: recebe uma lista, das novas informações do emprestimo
     :return: 0, para testes
     """
-    try:
-        for emprestimo in EMPRESTIMOS:
-            if identificador == emprestimo['nome']:
-                emprestimo['nome'] = novas_informarcoes[0]
-                emprestimo['telefone'] = novas_informarcoes[1]
-                emprestimo['celular'] = novas_informarcoes[2]
-                emprestimo['email'] = novas_informarcoes[3]
-                emprestimo['vivencia'] = novas_informarcoes[4]
-                data = novas_informarcoes[5]
-                emprestimo['data'] = datetime.strptime(data, '%d/%m/%Y').date()
-                emprestimo['item'] = novas_informarcoes[6]
-                gravar_dados()
-                sg.Popup("Atulizado com sucesso", button_color=('white', 'springgreen4'))
-                return 0
-    except TypeError:
-        return -2
+    for emprestimo in EMPRESTIMOS:
+        if identificador == emprestimo['nome']:
+            emprestimo['nome'] = novas_informarcoes[0]
+            emprestimo['telefone'] = novas_informarcoes[1]
+            emprestimo['celular'] = novas_informarcoes[2]
+            emprestimo['email'] = novas_informarcoes[3]
+            emprestimo['vivencia'] = novas_informarcoes[4]
+            data = novas_informarcoes[5]
+            emprestimo['data'] = datetime.strptime(data, '%d/%m/%Y').date()
+            emprestimo['item'] = novas_informarcoes[6]
+            gravar_dados()
+            return 0
+    return -2
 
 
 def listar_emprestimos():

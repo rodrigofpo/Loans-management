@@ -52,6 +52,7 @@ def tela_atualizacao(informacao_antiga):
     ]
     janela = sg.Window("Cadastro").Layout(layout)
     botao, valores = janela.Read()
+    print(valores)
     if botao == "Atualizar":
         janela.Close()
         return valores
