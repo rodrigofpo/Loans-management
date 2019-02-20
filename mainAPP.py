@@ -19,8 +19,8 @@ Projeto de software - Tecnicas de programacao II
     - Modules.py: Esse modulo fornece todas funções para salvar e ler (os dados da aplicação em arquivo,
      usando a biblioteca Pickle), cadastrar, listar cadastros, buscar por nome, ano e mes + ano(usando dicionario
      e modulo datetime).
-    - PySimpleGUI: framework para a parte gráfica do projeto
-    - Telas.telas: módulo contendo as demais telas do programa
+    - PySimpleGUI: framework para a parte gráfica do projeto.
+    - Telas.telas: módulo contendo as demais telas do programa.
 '''
 
 #aqui começa o software ...
@@ -35,20 +35,21 @@ coluna_detalhes = [[sg.Text('', key='nome', size=(30, 1), pad=(1,5))],
                    [sg.Text('', key='email', size=(30, 1), pad=(1,8))],
                    [sg.Text('', key='vivencia', size=(30, 1), pad=(1,8))],
                    [sg.Text('', key='data', size=(30, 1), pad=(1,8))],
-                   [sg.Text('', key='item', size=(30, 1), pad=(1,8))],
-                   [sg.Button("Editar", size=(8,1), button_color=('white', 'springgreen4'), pad=(10,20)),
-                    sg.Button("Apagar", size=(8,1), pad=(50,1), button_color=('white', 'springgreen4'))]]
+                   [sg.Text('', key='item', size=(30, 1), pad=(1,8))]
+                   ]
+coluna_btt = [[sg.Button('Editar', key='Editar',pad=(10,0,5), size=(8,1), button_color=('white', 'springgreen4')), sg.Button('Apagar', key='Apagar', size=(8,1), button_color=('white', 'springgreen4'))]]
+coluna_bt1 = [[sg.Button("Cadastrar",button_color=('white', 'springgreen4'), size=(8,1)), sg.Button("Sair", button_color=('white', 'firebrick3'), size=(8,1))]]
 
-coluna_nomes = [[sg.Button('Buscar', size=(8,1), pad=(100,1), button_color=('white', 'springgreen4'))],
-                [sg.Text("", size=(25,1), key='buscas'),
-                 sg.Button("", key='botao_busca', visible=False, size=(6,2),  button_color=('white', 'firebrick3'))],
+coluna_nomes = [[sg.Button('Buscar', size=(8,1), pad=(25,1), button_color=('white', 'springgreen4')), sg.Button("", key='botao_busca', visible=False, size=(12,1),  button_color=('white', 'firebrick3'))],
+                [sg.Text("", size=(30,2), justification=('center'), key='buscas')],
                 [sg.Listbox(values= NOMES, key='lista', change_submits=True, size=(130, 100))]]
 
-tela_principal = [[sg.Frame("Loans-Management", coluna_detalhes), sg.Column(coluna_nomes, size=(130,100))],
-                  [sg.Button("Cadastrar",button_color=('white', 'springgreen4'), size=(8,1)),
-                   sg.Button("Sair", button_color=('white', 'firebrick3'), size=(8,1), pad=(70,1))]]
+tela_principal = [[sg.Frame("Loans-Management", coluna_detalhes), sg.Column(coluna_nomes, size=(130,100))],                  
+                  [sg.Column(coluna_btt, key='Edit', visible=False)],
+                  [sg.Column(coluna_bt1, key='Apag', visible=True)]]
 
-janela = sg.Window("Loans-Management", size=(630, 400), text_justification=('center')).Layout(tela_principal)
+
+janela = sg.Window("Loans-Management", size=(630, 400), icon=('/Icon/icon-logo.ico'), text_justification=('center')).Layout(tela_principal)
 
 while True:
     evento, valores = janela.Read()
@@ -71,6 +72,8 @@ while True:
             janela.FindElement('item').Update(item)
             janela.FindElement('email').Update(email)
             janela.FindElement('vivencia').Update(vivencia)
+            janela.FindElement('Edit').Update(visible=True)
+            janela.FindElement('Apag').Update(visible=True)
         except IndexError:
             pass
     elif evento == 'Buscar':
@@ -134,6 +137,7 @@ while True:
             atualizacao = mod.editar_emprestimo(valores['lista'][0], novos_dados)
             sg.Popup("Atulizado com sucesso", button_color=('white', 'springgreen4'))
             NOMES = mod.get_informacoes()
+            janela.FindElement('Edit').Update(visible=False)
             janela.FindElement('lista').Update(NOMES)
         except IndexError:
             pass
@@ -143,6 +147,7 @@ while True:
             if confirmar:
                 mod.exlcuir_emprestimo(valores['lista'][0])
                 NOMES = mod.get_informacoes()
+                janela.FindElement('Apag').Update(visible=False)
                 janela.FindElement('lista').Update(NOMES)
                 janela.FindElement('nome').Update('')
                 janela.FindElement('telefone').Update('')

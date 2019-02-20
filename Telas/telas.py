@@ -23,7 +23,7 @@ def tela_cadastro():
                 [sg.Button("Cadastrar",button_color=('white', 'springgreen4')),
                  sg.Cancel(button_text="Cancelar",button_color=('white', 'firebrick3'))]
                 ]
-    janela = sg.Window("Cadastro").Layout(layout)
+    janela = sg.Window("Cadastro", disable_close=True).Layout(layout)
     botao, valores = janela.Read()
     if botao == "Cadastrar":
         janela.Close()
@@ -69,9 +69,9 @@ def tela_escolha_busca():
                     [sg.Button("Nome", button_color=('white', 'springgreen4'), size=(8, 1)),
                      sg.Button("Item", button_color=('white', 'springgreen4'), size=(8, 1)),
                      sg.Button("Ano", button_color=('white', 'springgreen4'), size=(8, 1)),
-                     sg.Button("Mes + Ano", button_color=('white', 'springgreen4'), size=(8, 1))],
-                    [sg.Button("Cancelar", button_color=('white', 'firebrick3'), size=(8, 1), pad=(80, 1))]]
-    janela_busca = sg.Window("Buscas", size=(370, 100)).Layout(layout_busca)
+                     sg.Button("Mes + Ano", button_color=('white', 'springgreen4'), size=(15, 1))],
+                    [sg.Button("Cancelar", button_color=('white', 'firebrick3'), size=(8, 1), pad=(150, 1))]]
+    janela_busca = sg.Window("Buscas", size=(450, 150), text_justification=('center')).Layout(layout_busca)
     botao_busca, valores_busca = janela_busca.Read()
     janela_busca.Close()
     return botao_busca
