@@ -71,6 +71,7 @@ while True:
             janela.FindElement('item').Update(item)
             janela.FindElement('email').Update(email)
             janela.FindElement('vivencia').Update(vivencia)
+            janela.FindElement('botoes').Update(visible=True)
         except IndexError:
             pass
     elif evento == 'Buscar':
@@ -132,7 +133,6 @@ while True:
             emprestimo = mod.buscar_nome(valores['lista'][0])
             novos_dados = tela.tela_atualizacao(emprestimo)
             atualizacao = mod.editar_emprestimo(valores['lista'][0], novos_dados)
-            sg.Popup("Atulizado com sucesso", button_color=('white', 'springgreen4'))
             NOMES = mod.get_informacoes()
             janela.FindElement('lista').Update(NOMES)
         except IndexError:
@@ -156,3 +156,4 @@ while True:
 
     elif evento is None or evento == 'Sair':
         break
+sg.Popup("Obrigado por usar nosso sitemas.", button_color=('white', 'springgreen4'))
