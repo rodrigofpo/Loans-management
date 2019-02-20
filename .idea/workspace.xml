@@ -3,11 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="285c7318-8b12-4149-ae22-bff2393fb256" name="Default Changelist" comment="Modificações no cadastro, adicionando tratamento de erro e simplificação do código da tela de casdastro">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.pytest_cache/v/cache/nodeids" beforeDir="false" afterPath="$PROJECT_DIR$/.pytest_cache/v/cache/nodeids" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Modules.py" beforeDir="false" afterPath="$PROJECT_DIR$/Modules.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Telas/telas.py" beforeDir="false" afterPath="$PROJECT_DIR$/Telas/telas.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dadosEmprestimos.bin" beforeDir="false" afterPath="$PROJECT_DIR$/dadosEmprestimos.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mainAPP.py" beforeDir="false" afterPath="$PROJECT_DIR$/mainAPP.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_modules.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_modules.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,24 +15,39 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/Loans_management$list_box_test__1_.coverage" NAME="list_box_test (1) Coverage Results" MODIFIED="1549653161344" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Loans_management$list_box_test.coverage" NAME="list_box_test Coverage Results" MODIFIED="1549652830281" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Telas" />
     <SUITE FILE_PATH="coverage/Loans_management$telas.coverage" NAME="telas Coverage Results" MODIFIED="1549904294079" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Telas" />
     <SUITE FILE_PATH="coverage/Loans_management$modules.coverage" NAME="modules Coverage Results" MODIFIED="1549906307479" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Loans_management$list_box_test__1_.coverage" NAME="list_box_test (1) Coverage Results" MODIFIED="1549653161344" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Loans_management$mainAPP.coverage" NAME="mainAPP Coverage Results" MODIFIED="1549995030286" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Loans_management$testes.coverage" NAME="testes Coverage Results" MODIFIED="1549567301994" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Loans_management$testcode.coverage" NAME="testcode Coverage Results" MODIFIED="1550208754332" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="/media/rodrigo/SIR/Loans" />
     <SUITE FILE_PATH="coverage/Loans_management$list_box_test__2_.coverage" NAME="list_box_test (2) Coverage Results" MODIFIED="1549653269408" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Telas" />
+    <SUITE FILE_PATH="coverage/Loans_management$mainAPP.coverage" NAME="mainAPP Coverage Results" MODIFIED="1550195668850" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="Loans-management" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mainAPP.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-492">
-              <caret line="51" column="35" selection-start-line="51" selection-start-column="35" selection-end-line="51" selection-end-column="35" />
-              <folding>
-                <element signature="e#1065#1091#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="1185">
+              <caret line="81" column="36" selection-start-line="81" selection-start-column="36" selection-end-line="81" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -41,32 +55,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Modules.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1020">
-              <caret line="60" column="54" selection-start-line="60" selection-start-column="54" selection-end-line="60" selection-end-column="54" />
+            <state relative-caret-position="457">
+              <caret line="102" column="4" selection-start-line="102" selection-start-column="4" selection-end-line="102" selection-end-column="4" />
               <folding>
                 <element signature="e#62#75#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Telas/telas.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1173">
-              <caret line="69" column="59" selection-start-line="69" selection-start-column="59" selection-end-line="69" selection-end-column="59" />
-              <folding>
-                <element signature="e#0#21#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test_modules.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="26" selection-start-line="26" selection-end-line="26" />
             </state>
           </provider>
         </entry>
@@ -100,9 +93,9 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Modules.py" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/test_modules.py" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/Telas/telas.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/mainAPP.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/Telas/telas.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/test_modules.py" root0="SKIP_INSPECTION" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -116,19 +109,18 @@
         <option value="$PROJECT_DIR$/list_box_test.py" />
         <option value="$PROJECT_DIR$/Telas/list_box_test.py" />
         <option value="$PROJECT_DIR$/modules.py" />
+        <option value="$PROJECT_DIR$/Telas/telas.py" />
+        <option value="$PROJECT_DIR$/Telas/telas.py" />
         <option value="$PROJECT_DIR$/test_modules.py" />
-        <option value="$PROJECT_DIR$/mainAPP.py" />
+        <option value="/media/rodrigo/SIR/Loans/testcode.py" />
         <option value="$PROJECT_DIR$/Modules.py" />
-        <option value="$PROJECT_DIR$/Telas/telas.py" />
-        <option value="$PROJECT_DIR$/Telas/telas.py" />
+        <option value="$PROJECT_DIR$/mainAPP.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="608" />
-    <option name="y" value="9" />
-    <option name="width" value="676" />
-    <option name="height" value="670" />
+    <option name="width" value="576" />
+    <option name="height" value="864" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -136,22 +128,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope">
-        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
-          <expand>
-            <path>
-              <item name="Loans-management" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-            </path>
-            <path>
-              <item name="Loans-management" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="Telas" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -168,14 +144,30 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope">
+        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
+          <expand>
+            <path>
+              <item name="Loans-management" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+            </path>
+            <path>
+              <item name="Loans-management" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="Telas" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Nova Pasta" />
+    <property name="last_opened_file_path" value="/media/rodrigo/SIR/Loans/testcode.py" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -195,29 +187,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.mainAPP">
-    <configuration name="list_box_test (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Loans-management" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="C:\Users\BPMLAB-01\Desktop\Loans-management\Telas\list_box_test.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python.testcode">
     <configuration name="list_box_test (2)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Loans-management" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -247,9 +217,9 @@
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="" />
+      <option name="SDK_HOME" value="$USER_HOME$/thonny/bin/python3" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
@@ -306,15 +276,40 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="testcode" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Loans-management" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="$USER_HOME$/PycharmProjects/untitled/venv/bin/python" />
+      <option name="WORKING_DIRECTORY" value="/media/rodrigo/SIR/Loans" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="/media/rodrigo/SIR/Loans/testcode.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.testcode" />
         <item itemvalue="Python.mainAPP" />
         <item itemvalue="Python.modules" />
         <item itemvalue="Python.telas" />
         <item itemvalue="Python.list_box_test (2)" />
-        <item itemvalue="Python.list_box_test (1)" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="StructureViewFactory">
+    <option name="ACTIVE_ACTIONS" value=",SHOW_FIELDS" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -336,6 +331,8 @@
       <workItem from="1549916306273" duration="1877000" />
       <workItem from="1549923444455" duration="496000" />
       <workItem from="1549990663094" duration="3600000" />
+      <workItem from="1550195130166" duration="14274000" />
+      <workItem from="1550618509670" duration="1849000" />
     </task>
     <task id="LOCAL-00001" summary="Modificações no cadastro, adicionando tratamento de erro e simplificação do código da tela de casdastro">
       <created>1549479234899</created>
@@ -355,18 +352,17 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50612000" />
+    <option name="totallyTimeSpent" value="66735000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <frame x="0" y="0" width="1152" height="864" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17170954" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.68447834" weight="0.3396739" />
+      <window_info id="Structure" order="1" sideWeight="0.31552163" side_tool="true" weight="0.3396739" />
+      <window_info id="Favorites" order="2" sideWeight="0.1870229" side_tool="true" weight="0.3396739" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3293718" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49924356" visible="true" weight="0.28183362" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4981884" weight="0.2811705" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39898133" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -375,14 +371,14 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.3293718" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Regex Tester" order="10" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50075644" side_tool="true" weight="0.28183362" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5018116" side_tool="true" weight="0.2811705" />
       <window_info anchor="bottom" id="Terminal" order="12" weight="0.55687606" />
       <window_info anchor="bottom" id="Python Console" order="13" weight="0.3293718" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="SciView" order="3" />
-      <window_info anchor="right" id="Database" order="4" />
+      <window_info anchor="right" id="SciView" order="3" weight="0.32971016" />
+      <window_info anchor="right" id="Database" order="4" weight="0.32971016" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -439,19 +435,7 @@
     <entry file="file://$PROJECT_DIR$/Telas/telas(1).py" />
     <entry file="file://F:/Loans/Modules.py" />
     <entry file="file://$PROJECT_DIR$/testes.py" />
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="187">
-            <caret line="11" column="71" selection-start-line="11" selection-start-column="71" selection-end-line="11" selection-end-column="71" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.py" />
     <entry file="file://$PROJECT_DIR$/dadosEmprestimos.bin">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -474,40 +458,60 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test_modules.py">
+    <entry file="file://$PROJECT_DIR$/test">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file:///media/rodrigo/SIR/Loans/testcode.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" selection-start-line="26" selection-end-line="26" />
+        <state relative-caret-position="105">
+          <caret line="7" column="18" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mainAPP.py">
+    <entry file="file://$PROJECT_DIR$/test_modules.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-492">
-          <caret line="51" column="35" selection-start-line="51" selection-start-column="35" selection-end-line="51" selection-end-column="35" />
+        <state relative-caret-position="375">
+          <caret line="25" column="50" selection-start-line="25" selection-start-column="50" selection-end-line="25" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Telas/telas.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="64" column="55" lean-forward="true" selection-start-line="64" selection-start-column="55" selection-end-line="64" selection-end-column="55" />
           <folding>
-            <element signature="e#1065#1091#0" expanded="true" />
+            <element signature="e#0#21#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="180">
+            <caret line="12" column="22" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Modules.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1020">
-          <caret line="60" column="54" selection-start-line="60" selection-start-column="54" selection-end-line="60" selection-end-column="54" />
+        <state relative-caret-position="457">
+          <caret line="102" column="4" selection-start-line="102" selection-start-column="4" selection-end-line="102" selection-end-column="4" />
           <folding>
             <element signature="e#62#75#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Telas/telas.py">
+    <entry file="file://$PROJECT_DIR$/mainAPP.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1173">
-          <caret line="69" column="59" selection-start-line="69" selection-start-column="59" selection-end-line="69" selection-end-column="59" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="1185">
+          <caret line="81" column="36" selection-start-line="81" selection-start-column="36" selection-end-line="81" selection-end-column="36" />
         </state>
       </provider>
     </entry>

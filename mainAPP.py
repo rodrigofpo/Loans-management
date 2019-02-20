@@ -16,9 +16,9 @@ Projeto de software - Tecnicas de programacao II
 
 
 4 -Modulos que compoe o software: descrever a funçao de cada arquivo adicional que compoe o software
-    - modules.py: Esse modulo fornece todas funções para salvar e ler (os dados da aplicação em arquivo,
+    - Modules.py: Esse modulo fornece todas funções para salvar e ler (os dados da aplicação em arquivo,
      usando a biblioteca Pickle), cadastrar, listar cadastros, buscar por nome, ano e mes + ano(usando dicionario
-     e modulo datetime ).
+     e modulo datetime).
     - PySimpleGUI: framework para a parte gráfica do projeto
     - Telas.telas: módulo contendo as demais telas do programa
 '''
