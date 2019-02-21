@@ -49,7 +49,6 @@ tela_principal = [[sg.Frame("Loans-Management", coluna_detalhes), sg.Column(colu
                   [sg.Column(coluna_btt, key='Edit', visible=False)],
                   [sg.Column(coluna_bt1, key='Apag', visible=True)]]
 janela = sg.Window("Loans-Management", size=(600, 350), icon=('/Icon/icon-logo.ico'), text_justification=('center')).Layout(tela_principal)
-
 while True:
     evento, valores = janela.Read()
     if evento == 'lista':
