@@ -111,12 +111,12 @@ def get_informacoes(mes = '', ano = '', item = '', nome = ''):
         return lista_nomes
     if item != '':
         for emprestimo in EMPRESTIMOS:
-            if item == emprestimo['item']:
+            if item.lower() in emprestimo['item'].lower():
                 lista_nomes.append(emprestimo['nome'])
         return lista_nomes
     if nome != '':
         for emprestimo in EMPRESTIMOS:
-            if nome in emprestimo['nome']:
+            if nome.lower() in emprestimo['nome'].lower():
                 lista_nomes.append(emprestimo['nome'])
         return lista_nomes
     if nome == '':
@@ -163,20 +163,4 @@ def exlcuir_emprestimo(nome):
             gravar_dados()
             sg.Popup("Apagado com sucesso!", button_color=('white', 'springgreen4'))
     return 0
-
-
-#auxiliares
-def printar_aux(emprestimo):
-    """
-    Função para deburação do código
-    :param emprestimo: um dicionário, que estará na lista de emprestimos
-    :return: 0, para testes
-    """
-    print("Nome:", emprestimo['nome'])
-    print("Telefone:", emprestimo['telefone'])
-    print("Celular:", emprestimo['celular'])
-    print("E-mail:", emprestimo['email'])
-    print("De onde conheço:", emprestimo['vivencia'])
-    print("Data:", emprestimo['data'].strftime("%d/%m/%Y"))
-    print("Item:", emprestimo['item'])
 
