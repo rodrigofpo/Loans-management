@@ -21,7 +21,7 @@ também ser utilizados.
  - O item que foi emprestado.
 
 3- O software deve ter rotinas de busca :
- - por nome;
+ - Por nome;
  - Por item emprestado;
  - Por ano de empréstimo;
  - Por mês + ano de empréstimo.
